@@ -35,21 +35,21 @@ pipeline {
         env
         mvn -v
         cd spring-petclinic
-        mvn clean install
+        mvn package -DskipTests 
         """
       }
     }
 
     // Run Maven unit tests
-    stage('Unit Test'){
-      steps {
-        sh """
-        mvn -v
-        cd spring-petclinic
-        mvn test
-        """
-      }
-    }
+   //stage('Unit Test'){
+     // steps {
+       // sh """
+        //mvn -v
+        //cd spring-petclinic
+        //mvn test
+        //"""
+      //}
+   // } 
 
     // Build Container Image using the artifacts produced in previous stages
     stage('Build Spring App Image'){
