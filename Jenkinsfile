@@ -12,9 +12,7 @@ openshift.withCluster() {
 }
 
 pipeline {
-     tools {
-        jdk 'JDK8'
-   } 
+    
   
   agent {
     label "maven"
