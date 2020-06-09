@@ -35,9 +35,9 @@ pipeline {
       steps {
         sh """
         env
-        mvn -v -X
+        mvn -v
         cd spring-petclinic
-        mvn package -DskipTests -X
+        mvn package -DskipTests
         """
       }
     }
