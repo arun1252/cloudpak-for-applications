@@ -37,7 +37,7 @@ pipeline {
         env
         mvn -v -X
         cd spring-petclinic
-        mvn package -DskipTests 
+        mvn package -DskipTests -X
         """
       }
     }
